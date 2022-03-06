@@ -16,9 +16,9 @@ const Wines = props => {
                 <tbody>
                     {props.wines.map(wine =>
                     <tr key={wine.id}>
-                        <td className = 'name'>{wine.name}</td>
-                        <td className = 'rate'>{wine.n_rate}</td>
-                        <td className = 'rate'>{wine.m_rate}</td>
+                        <td className = 'wineData'>{wine.name}</td>
+                        <td className = 'wineData'>{wine.n_rate}</td>
+                        <td className = 'wineData'>{wine.m_rate}</td>
                     </tr>
                 )};
             </tbody>
