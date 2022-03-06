@@ -20,7 +20,7 @@ const Wines = props => {
                         <td className = 'wineData'>{wine.n_rate}</td>
                         <td className = 'wineData'>{wine.m_rate}</td>
                     </tr>
-                )};
+                )}
             </tbody>
         </Table>
     );
