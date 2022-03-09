@@ -5,10 +5,11 @@ import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'react-calendar/dist/Calendar.css';
 import './index.css';
 import App from './App';
 import wineReducer from './reducers/wineReducer';
-import 'bootstrap/dist/css/bootstrap.css';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

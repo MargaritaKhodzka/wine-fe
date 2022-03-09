@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import { fetchWines } from '../actions/wineActions';
 import Wines from '../components/Wines';
 import Wine from '../components/Wine';
+import WineInput from '../components/WineInput';
 
 class WinesContainer extends React.Component {
     componentDidMount() {
@@ -16,6 +17,7 @@ class WinesContainer extends React.Component {
     render() {
         return (
             <Routes>
+                <Route path='new' element={<WineInput />} />
                 <Route path='/' element={<Wines wines={this.props.wines} />} />
                 <Route path=':id' element={<Wine wines={this.props.wines} />} />
             </Routes>

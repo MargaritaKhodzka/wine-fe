@@ -1,6 +1,6 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import Button from 'react-bootstrap/Button'
+import { Button } from 'reactstrap';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import dateFormat from 'dateformat';
 import { connect } from 'react-redux';
@@ -20,7 +20,7 @@ const Wine = props => {
     
     return (
         <div>
-            <Link className = 'backLink' to='/'>Back to the wine list</Link>
+            <Link className = 'largeButton' to='/'>Back to the wine list</Link>
 
             <h3>{wine && wine.name}</h3>
             
@@ -62,7 +62,8 @@ const Wine = props => {
                     </tr>
                 </tbody>
             </Table>
-            <Button variant="outline-secondary" onClick={handleDelete}>Delete</Button>{' '}
+
+            <Button className = 'smallButton' onClick={handleDelete}>Delete</Button>
         </div>
     );
 }

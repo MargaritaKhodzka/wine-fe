@@ -6,6 +6,9 @@ export default function wineReducer(state = {wines: []}, action) {
             return {
                 wines: action.payload
             }
+
+        case 'ADD_WINE':
+            return {...state, wine: [...state.wines, action.payload]}
         
         case 'DELETE_WINE':
             const filteredWines = state.wines.filter(wine => wine.id !== action.payload);

@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 const Wines = props => {
     return (
        <div>
+           <Link className = 'largeButton' to='/new'>Add A New Wine</Link>
+
             <Table responsive>
                 <thead>
                     <tr>
