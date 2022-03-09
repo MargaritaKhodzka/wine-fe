@@ -17,3 +17,16 @@ thead {
   text-decoration: none;
 }
 
+h3 {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 20px;
+  color: #443266;
+  padding: 10px 0;
+}
+
+.backLink {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14px;
+  color: #443266;
+  text-decoration: none;
+}
