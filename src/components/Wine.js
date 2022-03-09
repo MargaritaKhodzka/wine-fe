@@ -1,13 +1,22 @@
 import React from 'react';
 import Table from 'react-bootstrap/Table';
-import { Link, useParams } from 'react-router-dom';
-import dateFormat, { masks } from "dateformat";
+import Button from 'react-bootstrap/Button'
+import { Link, useParams, useNavigate } from 'react-router-dom';
+import dateFormat from 'dateformat';
+import { connect } from 'react-redux';
+import { deleteWine } from '../actions/wineActions';
 
 const Wine = props => {
     
     const { id } = useParams();
+    const navigate = useNavigate();
     const wine = props.wines.find((wine) => wine.id === Number(id));
     console.log(wine && wine.date);
+
+    const handleDelete = () => {
+        props.deleteWine(wine.id);
+        navigate('/');
+    }
     
     return (
         <div>
@@ -53,8 +62,9 @@ const Wine = props => {
                     </tr>
                 </tbody>
             </Table>
+            <Button variant="outline-secondary" onClick={handleDelete}>Delete</Button>{' '}
         </div>
     );
 }
 
-export default Wine;
+export default connect(null, { deleteWine })(Wine);
