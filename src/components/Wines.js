@@ -17,7 +17,7 @@ const Wines = props => {
                 <tbody>
                     {props.wines.map(wine =>
                     <tr key={wine.id}>
-                        <td className = 'wineData'><Link to={`${wine.id}`}>{wine.name}</Link></td>
+                        <td><Link className = 'wineData' to={`${wine.id}`}>{wine.name}</Link></td>
                         <td className = 'wineData'>{wine.n_rate}</td>
                         <td className = 'wineData'>{wine.m_rate}</td>
                     </tr>
