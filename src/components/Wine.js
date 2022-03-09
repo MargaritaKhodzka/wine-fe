@@ -11,7 +11,7 @@ const Wine = props => {
     
     return (
         <div>
-            <Link className = 'backLink' to='/wines'>Back to the wine list</Link>
+            <Link className = 'backLink' to='/'>Back to the wine list</Link>
 
             <h3>{wine && wine.name}</h3>
             
